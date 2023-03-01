@@ -1,0 +1,29 @@
+{
+  "name": "m1-w1-d2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amirreza10101998/m1-w1-d2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amirreza10101998/m1-w1-d2/issues"
+  },
+  "homepage": "https://github.com/Amirreza10101998/m1-w1-d2#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-list-endpoints": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
