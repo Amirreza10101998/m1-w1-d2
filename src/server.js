@@ -6,6 +6,8 @@ const server = Express();
 
 const port = 3002;
 
+server.use(Express.json())
+
 
 server.use("/authors", userRouter)
 console.table(listEndpoints(server))

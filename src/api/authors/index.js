@@ -10,12 +10,24 @@ DELETE /authors/123 => delete the author with the given id -> DELETE http://loca
 
 import Express from "express";
 import fs from 'fs'
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
 const userRouter = Express.Router()
 
-//const userJSONPath = 
+/*const userJSONPath = 
+//1.
+console.log("currrent file url:", import.meta.url)
+console.log("current file path:", fileURLToPath(import.meta.url))
+//2.
+console.log("parents folder path:", dirname(fileURLToPath(import.meta.url)))
+//3.
+console.log("target:", join(dirname(fileURLToPath(import.meta.url)), "users.json"))
+*/
 
-console.log(import.meta.url)
+
+const userJSONPath = join(dirname(fileURLToPath(import.meta.url), "users.json"));
+
 
 //1.
 userRouter.get("/", (req, res) => {
