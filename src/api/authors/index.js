@@ -13,7 +13,7 @@ import fs from 'fs'
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-const userRouter = Express.Router()
+const authorRouter = Express.Router()
 
 /*const userJSONPath = 
 //1.
@@ -26,24 +26,24 @@ console.log("target:", join(dirname(fileURLToPath(import.meta.url)), "users.json
 */
 
 
-const userJSONPath = join(dirname(fileURLToPath(import.meta.url), "users.json"));
+const authorJSONPath = join(dirname(fileURLToPath(import.meta.url), "author.json"));
 
 
 //1.
-userRouter.get("/", (req, res) => {
-    const fileContent = JSON.parse(fs.readFileSync())
+authorRouter.get("/", (req, res) => {
+    fs.readFileSync(authorJSONPath) 
 })
 
 //2.
-userRouter.get("/:userId", (req, res) => {})
+authorRouter.get("/:userId", (req, res) => {})
 
 //3.
-userRouter.post("/", (req, res) => {})
+authorRouter.post("/", (req, res) => {})
 
 //4.
-userRouter.put("/:userId", (req, res) => {})
+authorRouter.put("/:userId", (req, res) => {})
 
 //5.
-userRouter.delete("/:userId", (req, res) => {})
+authorRouter.delete("/:userId", (req, res) => {})
 
-export default userRouter
+export default authorRouter
